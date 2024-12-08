@@ -128,9 +128,11 @@ app.post('/agrega_todo', jsonParser, function (req, res) {
     });
 });
 
-//Corremos el servidor en el puerto 3001
+// Establecer la URL del backend en Render
 const port = 3001;
+const baseUrl = 'https://proyectoappmovil.onrender.com'; // URL proporcionada por Render
 
+// Corremos el servidor en el puerto configurado
 app.listen(port, () => {
-    console.log(`Aplicación corriendo en http://localhost:${port}`)
-})
+  console.log(`Aplicación corriendo en ${baseUrl}`);
+});
